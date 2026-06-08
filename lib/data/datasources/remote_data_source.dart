@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 abstract class RemoteDataSource {
   /// Fetch data from remote API
   Future<dynamic> fetchData();
@@ -7,7 +9,7 @@ abstract class RemoteDataSource {
 }
 
 class RemoteDataSourceImpl implements RemoteDataSource {
-  final dio.Dio dio;
+  final Dio dio;
 
   RemoteDataSourceImpl({required this.dio});
 
